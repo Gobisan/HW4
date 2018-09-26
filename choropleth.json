@@ -33,10 +33,12 @@
       ]
     }
   ],
-  "projections": [
+  "projections": [{"name": "projection", "type": "albersUsa"}],
+   "legends": [
     {
-      "name": "projection",
-      "type": "albersUsa"
+      "fill": "color",
+      "orient": "bottom-right",
+      "title": "losses"
     }
   ],
   "scales": [
