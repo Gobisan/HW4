@@ -43,8 +43,8 @@
     {
       "name": "color",
       "type": "quantize",
-      "domain": [0, 0.1],
-      "range": {"scheme": "blues", "count": 7}
+      "domain": [0, 200000000],
+      "range": {"scheme": "blues", "count": 100}
     }
   ],
   "marks": [
