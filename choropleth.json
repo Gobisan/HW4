@@ -20,7 +20,7 @@
     },
     {
       "name": "states",
-      "url": "data/us-10m.json",
+      "url": "https://raw.githubusercontent.com/Gobisan/git-rep/master/us-10m.json",
       "format": {"type": "topojson", "feature": "states"},
       "transform": [
         {
