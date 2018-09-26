@@ -13,16 +13,23 @@
 <body>
 
 <!-- Container for the visualization -->
-<div id="vis"></div>
-
-
+<h2><b>Bar chart</b></h2>
+<div id="bar_chart_vis"></div>
+<h2><b>Map</b></h2>
+<div id="map_vis"></div>
 <script type="text/javascript">
   // var spec = "our_bar_chart.json";
   // this does not work when you run locally due to security reasons - it needs to be read from a server
-  var spec = "https://raw.githubusercontent.com/Gobisan/git-rep/master/choropleth.json";
-  vegaEmbed('#vis', spec).then(function(result) {
+  var spec = "https://raw.githubusercontent.com/Gobisan/git-rep/master/barchart.json";
+  vegaEmbed('#bar_chart_vis', spec).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+
+  var spec = "https://raw.githubusercontent.com/Gobisan/git-rep/master/choropleth.json";
+  vegaEmbed('#map_vis', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
 </script>
 
 
