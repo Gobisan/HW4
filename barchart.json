@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "data": {"url": "", "format": {"type": "csv"}},
+  "data": {"url": "https://raw.githubusercontent.com/Gobisan/git-rep/master/losses2015_transformed.csv", "format": {"type": "csv"}},
   "mark": "bar",
   "encoding": {
     "x": {"field": "Amount", "type": "quantitative"},
