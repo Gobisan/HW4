@@ -11,7 +11,7 @@
       "transform": [
         {
           "type": "aggregate",
-          "groupby": ["State_Code"],
+          "groupby": ["State_Code","State_Abv"],
           "fields": ["Amount"],
           "ops": ["sum"],
           "as": ["Amount"]
@@ -28,25 +28,19 @@
           "from": "losses",
           "key": "State_Code",
           "fields": ["id"],
-          "values": ["Amount"]
+          "values":  ["State_Code","Amount","State_Abv"] 
         }
       ]
     }
   ],
   "projections": [{"name": "projection", "type": "albersUsa"}],
-   "legends": [
-    {
-      "fill": "color",
-      "orient": "bottom-right",
-      "title": "losses"
-    }
-  ],
+  "legends": [{"fill": "color", "orient": "bottom-right", "title": "losses"}],
   "scales": [
     {
       "name": "color",
       "type": "quantize",
       "domain": [0, 400000000],
-      "range": {"scheme": "blues", "count": 7}
+      "range": {"scheme": "blues", "count": 500}
     }
   ],
   "marks": [
@@ -54,7 +48,7 @@
       "type": "shape",
       "from": {"data": "states"},
       "encode": {
-        "enter": {"tooltip": {"signal": "format(datum.Amount,'1')"}},
+        "enter": {"tooltip": {"signal": "'State:'+ datum.State_Abv +','+' Amount:' + format(datum.Amount,',d')"}},
         "update": {"fill": {"scale": "color", "field": "Amount"}},
         "hover": {"fill": {"value": "red"}}
       },
