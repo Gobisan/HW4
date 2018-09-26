@@ -36,9 +36,7 @@
   "projections": [
     {
       "name": "projection",
-      "type": "albersUsa",
-      "scale": 1000,
-      "translate": [{"signal": "width / 2"}, {"signal": "height / 2"}]
+      "type": "albersUsa"
     }
   ],
   "scales": [
